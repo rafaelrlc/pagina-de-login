@@ -1,14 +1,31 @@
 import React from "react";
 
 import Navigation from "./Navigation";
-import classes from "./MainHeader.module.css";
+import styled from "styled-components";
 
 const MainHeader = (props) => {
+  const Header_main = styled.header`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #741188;
+    padding: 0 2rem;
+
+    h1 {
+      color: white;
+    }
+  `;
+
   return (
-    <header className={classes["main-header"]}>
-      <h1>A Typical Page</h1>
-      <Navigation onLogout={props.onLogout} />
-    </header>
+    <Header_main>
+      <h1>React Hooks Pratice</h1>
+      <Navigation />
+    </Header_main>
   );
 };
 
