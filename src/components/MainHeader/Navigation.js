@@ -33,7 +33,7 @@ const Nav__bar = styled.nav`
     background: #dd0db0;
     border: 1px solid #dd0db0;
     padding: 0.5rem 1.5rem;
-    color: white;
+    color: ${(props) => props.cor};
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
     border-radius: 20px;
@@ -53,7 +53,7 @@ const Nav__bar = styled.nav`
 const Navigation = (props) => {
   const ctx = useContext(AuthContext);
   return (
-    <Nav__bar>
+    <Nav__bar cor={"white"}>
       <ul>
         {ctx.isLoggedIn && (
           <li>
