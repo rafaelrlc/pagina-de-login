@@ -13,17 +13,18 @@ const MainHeader = (props) => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #741188;
+    background: #1f4690;
     padding: 0 2rem;
 
     h1 {
       color: white;
+      font-size: 1.5rem;
     }
   `;
 
   return (
     <Header_main>
-      <h1>React Hooks Pratice</h1>
+      <h1>Página de Login - React</h1>
       <Navigation />
     </Header_main>
   );

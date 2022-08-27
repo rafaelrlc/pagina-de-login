@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 //import classes from "./Navigation.module.css";
 import AuthContext from "../../store/auth-context";
 import styled from "styled-components";
+import Button from "../UI/Button/Button";
 
 const Nav__bar = styled.nav`
-  ul {
+  & ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -13,40 +14,19 @@ const Nav__bar = styled.nav`
     align-items: center;
   }
 
-  li {
+  & li {
     margin: 0;
     margin-left: 2rem;
   }
 
-  a {
+  & a {
     text-decoration: none;
     color: white;
   }
 
-  a:hover,
-  a:active {
-    color: #f3cafb;
-  }
-
-  .button-logout {
-    font: inherit;
-    background: #dd0db0;
-    border: 1px solid #dd0db0;
-    padding: 0.5rem 1.5rem;
-    color: ${(props) => props.cor};
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
-    border-radius: 20px;
-  }
-
-  .button-logout:focus {
-    outline: none;
-  }
-
-  .button-logout:hover,
-  .button-logout:active {
-    color: #f3cafb;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.26);
+  & a:hover,
+  & a:active {
+    color: #4477d6;
   }
 `;
 
@@ -57,7 +37,10 @@ const Navigation = (props) => {
       <ul>
         {ctx.isLoggedIn && (
           <li>
-            <a href="/">Users</a>
+            <div>
+              <a href="/">Users</a>
+              <div className="below-line"></div>
+            </div>
           </li>
         )}
         {ctx.isLoggedIn && (
@@ -67,9 +50,9 @@ const Navigation = (props) => {
         )}
         {ctx.isLoggedIn && (
           <li>
-            <button className="button-logout" onClick={ctx.onLogout}>
+            <Button className="button-logout" onClick={ctx.onLogout}>
               Logout
-            </button>
+            </Button>
           </li>
         )}
       </ul>
