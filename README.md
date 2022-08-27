@@ -1,2 +1,7 @@
-1-) NPM INSTALL
-2-) NPM START
+
+
+
+TO INITIALIZE: 
+
+1-) npm install
+2-) npm start
