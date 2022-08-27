@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LoginComponent = styled.div`
+const LoginComponent = styled.form`
   margin: 1rem 0;
   display: flex;
   align-items: stretch;
@@ -14,10 +14,7 @@ const LoginComponent = styled.div`
   & label {
     font-weight: bold;
     flex: 1;
-    color: #464646;            <div>
-              <a href="/">Users</a>
-              <div className="below-line"></div>
-            </div>
+    color: #464646;
   }
 
   & input {

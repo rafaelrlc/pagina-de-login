@@ -14,7 +14,10 @@ const InputLogin = React.forwardRef((props, ref) => {
     };
   });
   return (
-    <LoginComponent className={!props.isValid ? "invalid" : ""}>
+    <LoginComponent
+      className={!props.isValid ? "invalid" : ""}
+      autocomplete="off"
+    >
       <label htmlFor={props.id}>{props.label}</label>
       <input
         ref={inputRef}
